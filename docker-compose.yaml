@@ -1,15 +1,15 @@
 version: '3.8'
 
 services:
-  # app:
-  #   container_name: app
-  #   build: .
-  #   ports:
-  #     - 4000:4000
-  #   volumes:
-  #     - .:/home/node/app
-  #   depends_on:
-  #     - db
+  app:
+    container_name: app
+    build: .
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/home/node/app
+    depends_on:
+      - db
   db:
     container_name: mssql
     image: mcr.microsoft.com/mssql/server:2019-latest
