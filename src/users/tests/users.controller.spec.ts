@@ -1,7 +1,7 @@
-import { UsersService } from './users.service'
-import { UsersController } from './users.controller'
+import { UsersService } from '../users.service'
+import { UserEntity } from '../entities/user.entity'
+import { UsersController } from '../users.controller'
 import { Test, TestingModule } from '@nestjs/testing'
-import { UserEntity } from './entities/user.entity'
 
 const users: UserEntity[] = [
   new UserEntity({
@@ -12,13 +12,13 @@ const users: UserEntity[] = [
   }),
 ]
 
-const [firstUser] = users
+const [oneUser] = users
 
 const mockUserService = {
   findAll: jest.fn().mockResolvedValue(users),
-  findOne: jest.fn().mockResolvedValue(firstUser),
-  create: jest.fn().mockResolvedValue(firstUser),
-  update: jest.fn().mockResolvedValue(firstUser),
+  findOne: jest.fn().mockResolvedValue(oneUser),
+  create: jest.fn().mockResolvedValue(oneUser),
+  update: jest.fn().mockResolvedValue(oneUser),
   remove: jest.fn().mockResolvedValue(undefined),
 }
 
@@ -51,20 +51,20 @@ describe('UsersController', () => {
   })
 
   it('should return a single user', async () => {
-    const result = await controller.findOne(firstUser.id)
-    expect(result).toEqual(firstUser)
+    const result = await controller.findOne(oneUser.id)
+    expect(result).toEqual(oneUser)
   })
 
   it('should create an user', async () => {
-    const result = await controller.create(firstUser)
-    expect(result.id).toEqual(firstUser.id)
-    expect(result.name).toEqual(firstUser.name)
-    expect(result.email).toEqual(firstUser.email)
+    const result = await controller.create(oneUser)
+    expect(result.id).toEqual(oneUser.id)
+    expect(result.name).toEqual(oneUser.name)
+    expect(result.email).toEqual(oneUser.email)
   })
 
   it('should update an user', async () => {
-    const result = await controller.update(firstUser.id, firstUser)
-    expect(result.name).toEqual(firstUser.name)
+    const result = await controller.update(oneUser.id, oneUser)
+    expect(result.name).toEqual(oneUser.name)
   })
 
   it('should delete an user', async () => {
