@@ -7,7 +7,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  name    String
-  email   String  @unique
+model Users {
+  id            String     @id  @default(uuid())
+  name          String
+  email         String     @unique
+  phone         String?
+  active        Boolean?   @default(true)
+  username      String?
+  password      String
+  description   String?
+  first_access  Boolean?   @default(true)
+  created_at    DateTime   @default(now())
+  updated_at    DateTime   @updatedAt
 }
