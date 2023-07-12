@@ -1,7 +1,7 @@
-import { UsersService } from '../users.service'
-import { UserEntity } from '../entities/user.entity'
 import { Test, TestingModule } from '@nestjs/testing'
-import { PrismaService } from '../../prisma/prisma.service'
+import { UsersService } from '../../src/users/users.service'
+import { PrismaService } from '../../src/prisma/prisma.service'
+import { UserEntity } from '../../src/users/entities/user.entity'
 
 const users: UserEntity[] = [
   new UserEntity({

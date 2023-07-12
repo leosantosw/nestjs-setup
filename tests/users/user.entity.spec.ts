@@ -1,4 +1,4 @@
-import { UserEntity } from '../entities/user.entity'
+import { UserEntity } from '../../src/users/entities/user.entity'
 
 describe('User tests', () => {
   it('should create an user', () => {

@@ -1,7 +1,7 @@
-import { UsersService } from '../users.service'
-import { UserEntity } from '../entities/user.entity'
-import { UsersController } from '../users.controller'
 import { Test, TestingModule } from '@nestjs/testing'
+import { UsersService } from '../../src/users/users.service'
+import { UserEntity } from '../../src/users/entities/user.entity'
+import { UsersController } from '../../src/users/users.controller'
 
 const users: UserEntity[] = [
   new UserEntity({
