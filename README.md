@@ -1,73 +1,43 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<h1 align="center">NestJS - Setup</h1>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<p align="center">📚 This project is a NestJS setup for building APIs. 🧪</p>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Description 💡 <a name="description"></a>
 
-## Description
+[TODO]
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Installation
+## Installation 🛠️ <a name="installation"></a>
 
-```bash
-$ npm install
-```
+1. Open the terminal or command prompt and navigate to the project's root directory.
 
-## Running the app
+2. Run the following command to run the project:
+   ```bash
+   docker compose up
 
-```bash
-# development
-$ npm run start
+## Scripts 🚀 <a name="scripts"></a>
 
-# watch mode
-$ npm run start:dev
+- `npm run build` - Compiles the NestJS project.
+- `npm run format` - Automatically formats all TypeScript files in the `src/` directory.
+- `npm start` - Starts the NestJS server in production mode.
+- `npm run start:dev` - Starts the NestJS server in development mode with file change monitoring.
+- `npm run start:prod` - Starts the compiled Node.js server in production mode.
+- `npm run lint` - Runs the ESLint tool to check and automatically fix code style issues in the TypeScript files located in the `src/`, `apps/`, `libs/`, and `test/` directories.
+- `npm test` - Runs unit tests using the Jest framework.
+- `npm run test:watch` - Runs unit tests in watch mode, automatically re-running tests whenever files are modified.
+- `npm run test:cov` - Runs unit tests and generates a code coverage report using the Jest framework.
+- `npm run prepare` - Installs Husky hooks to automate tasks before commits and pushes.
 
-# production mode
-$ npm run start:prod
-```
+---
 
-## Test
+## Prisma 🛢️ <a name="prisma"></a>
+
+Prisma is an ORM tool used in this project for database access and management.
+
+### Seed 🌱
+
+The seed script is responsible for populating the database with initial data. To run it, use the following command:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+npx prisma db seed
